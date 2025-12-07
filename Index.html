@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEDICAL DATA PORTAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style>
+        /* CSS Styling - Optimized for Compact/Mobile View on all screens */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5; 
+            color: #333;
+            text-align: center;
+            padding: 15px; 
+            margin: 0; 
+        }
+
+        .dashboard-container {
+            max-width: 600px; /* සියලු තිර සඳහා උපරිම පළල කුඩා කළා (Mobile-sized layout) */
+            margin: 30px auto; 
+            display: flex; 
+            flex-direction: column; /* කාඩ්පත් එක මත එක පෙන්වීමට */
+            gap: 15px; 
+            justify-content: center;
+            padding: 0 15px; /* පැතිවලින් කුඩා ඉඩක් තැබීමට */
+        }
+
+        h1 {
+            color: #1a5276;
+            margin-bottom: 5px; 
+            font-size: 24px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+        }
+
+        p.subtitle {
+            margin-bottom: 25px; 
+            color: #666;
+            font-size: 14px; 
+        }
+
+        .action-card {
+            background: #ffffff;
+            border-radius: 10px; 
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+            padding: 18px; 
+            text-align: left;
+            width: 100%; /* කන්ටේනරයේ පළලම ගන්නා ලෙස සකස් කළා */
+            box-sizing: border-box;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 17px; 
+            font-weight: 700; 
+            margin-bottom: 3px; 
+            /* වර්ණ මෙතන නැවතත් යොදනු ලබයි */
+            text-transform: uppercase; 
+        }
+        
+        .card-description {
+            font-size: 12px; 
+            color: #777;
+            margin-bottom: 10px; 
+        }
+        
+        .card-link {
+            display: inline-block;
+            color: #007bff;
+            font-weight: 600;
+            border-bottom: 1px solid #007bff; 
+            padding-bottom: 1px;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 13px; 
+        }
+
+        .card-link:hover {
+            color: #0056b3;
+        }
+
+        /* වර්ණ */
+        .card-attendance .card-title { color: #28a745; } /* පැමිණීම - කොළ */
+        .card-other .card-title { color: #6f42c1; } /* වෙනත් - දම් */
+        .card-leave .card-title { color: #dc3545; } /* නිවාඩු - රතු */
+    </style>
+</head>
+<body>
+
+    <h1>MEDICAL DATA PORTAL</h1>
+    <p class="subtitle">Following Instruction Before Entering or Checking Data.</p>
+
+    <div class="dashboard-container">
+        
+        <a href="https://liyana-web-zone.github.io/MEDICAL_APPLICATION_FORM/Index.html" class="action-card card-attendance">
+            <div class="card-title">MEDICAL APPLICATION FORM</div>
+            <p class="card-description">Enter the correct information to obtain medical records. After filling in the information and submitting the form, remember the application number you will receive.</p>
+            <span class="card-link">Enter Now</span>
+        </a>
+
+        <a href="https://liyana-web-zone.github.io/MC_APPLICATION_STATUS/Index.html" class="action-card card-other">
+            <div class="card-title">MEDICAL APPLICATION STATUS</div>
+            <p class="card-description">Use the application number obtained after filling out the medical application to check the status of this medical record processing process.</p>
+            <span class="card-link">Enter Now</span>
+        </a>
+
+        <a href="URL_OF_LEAVE_PAGE" class="action-card card-leave">
+            <div class="card-title">APPLICATION INSTRUCTIONS</div>
+            <p class="card-description">Instructions on how to use this website are available in five languages (English, Sinhala, Tamil, Chinese and Hindi) or contact your representative.</p>
+            <span class="card-link">Enter Now</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
