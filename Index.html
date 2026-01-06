@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEDICAL DATA PORTAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <style>
+        html {
+            background-color: #d1d9e0;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%; /* උස සීමා නොකර අවශ්‍ය පරිදි වැඩි වීමට */
+            margin: 0 auto;
+            padding: 0;
+            /* overflow: hidden ඉවත් කර ස්ක්‍රොල් වීමට ඉඩ ලබා දුන්නා */
+            overflow-y: auto; 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 450px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .info-bar {
+            width: 100%;
+            background-color: #1a5276;
+            color: #ffffff;
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky; /* පෝටල් එක ස්ක්‍රොල් කරන විට වෙලාව සහ දිනය උඩම රැඳී තිබීමට */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .info-item {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 550px; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px; 
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 40px; 
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #1a5276;
+            font-size: 26px; 
+            font-weight: 800;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: #5a6a7a;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+        }
+
+        .action-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px; 
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e0e6ed;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .card-title {
+            font-size: 19px; 
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .title-form { color: #1e8449; }
+        .title-status { color: #6c3483; }
+
+        .card-description {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #4a5568;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .card-button {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+
+        .btn-form { background-color: #27ae60; }
+        .btn-status { background-color: #8e44ad; }
+
+        .footer-line {
+            border: 0;
+            height: 2px;
+            background: #000000;
+            margin-bottom: 20px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer {
+            padding-bottom: 30px;
+            text-align: center;
+            color: #1a5276;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 1.5;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 450px) {
+            .info-item { font-size: 14px; }
+            .info-bar { padding: 10px 15px; }
+            header { margin-top: 30px; }
+            footer { padding-bottom: 20px; font-size: 15px; }
+            .footer-line { margin-bottom: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-bar">
+        <div id="display-date" class="info-item"></div>
+        <div id="display-time" class="info-item"></div>
+    </div>
+
+    <div class="main-wrapper">
+        <header>
+            <h1>MEDICAL DATA PORTAL</h1>
+            <p class="subtitle">Please Follow the Instructions or Contact Technical Staff Before Entering or Checking Data.</p>
+        </header>
+
+        <div class="card-container">
+            <a href="https://liyana-web-zone.github.io/MEDICAL_APPLICATION_FORM/Index.html" class="action-card">
+                <div class="card-title title-form">Medical Application Form</div>
+                <p class="card-description">Enter the correct information to obtain medical records. Save the application number you receive after submitting the form to check the status of your request.</p>
+                <div class="card-button btn-form">Enter Now</div>
+            </a>
+
+            <a href="https://liyana-web-zone.github.io/MC_APPLICATION_STATUS/Index.html" class="action-card">
+                <div class="card-title title-status">Application Status</div>
+                <p class="card-description">Use your application number to check the current processing status of your medical certificate. You can download the medical certificate yourself once the application is 100% complete.</p>
+                <div class="card-button btn-status">Check Now</div>
+            </a>
+        </div>
+
+        <footer>
+            <hr class="footer-line">
+            DS MEDICALS (PVT) LTD<br>
+            WEB BROADCASTING UNIT<br>
+            SINGAPORE<br>
+            2026
+        </footer>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const day = String(now.getDate()).padStart(2, '0');
+            const monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+                                "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+            const month = monthNames[now.getMonth()];
+            const year = now.getFullYear();
+            document.getElementById('display-date').textContent = `${year} ${month} ${day}`;
+
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; 
+            const formattedTime = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+            document.getElementById('display-time').textContent = formattedTime;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
